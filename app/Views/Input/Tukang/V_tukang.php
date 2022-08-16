@@ -42,7 +42,7 @@
         $('.btn_add').click(function(e) {
             e.preventDefault();
             $.ajax({
-                url: "<?= site_url('Tukang/form_tambah_tukang'); ?>",
+                // url: "<?= site_url('Tukang/form_tambah_tukang'); ?>",
                 dataType: "json",
                 success: function(response) {
                     $('.v_modal').html(response.data).show();

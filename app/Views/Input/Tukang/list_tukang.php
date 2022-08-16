@@ -18,7 +18,7 @@
     });
 
     function list() {
-        var table = $('#table_tukang').DataTable({
+        var table = $('#tableTukang').DataTable({
             "processing": true,
             "serverSide": true,
             retrieve: true,
@@ -26,19 +26,19 @@
             info: true,
             autoWidth: false,
             responsive: true,
-            // language: {
-            //     url: "/js/bahasa.json",
-            // },
+            language: {
+                url: "/js/bahasa.json",
+            },
             pagingType: "full_numbers",
             pageLength: 5,
             lengthMenu: [5, 10, 15, 30],
             "order": [
 
             ],
-            "ajax": {
-                "url": "<?= site_url('Tukang/list_data'); ?>",
-                "type": "POST"
-            },
+            // "ajax": {
+            //     "url": "<?= site_url('Tukang/list_data'); ?>",
+            //     "type": "POST"
+            // },
             "columnDefs": [{
                 "targets": [0, 4],
                 "orderable": false
